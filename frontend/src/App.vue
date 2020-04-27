@@ -3,7 +3,6 @@
     <nav class="navbar navbar-light" style="background-color: #e3f2fd;">
       <router-link to="/">Beats</router-link>
       <router-link to="/about">Contact</router-link>
-      <router-link to="/about">Contact</router-link>
     </nav>
     <br />
     <router-view />
