@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="container">
     <b-input-group
       class="mb-2"
       size="sm"

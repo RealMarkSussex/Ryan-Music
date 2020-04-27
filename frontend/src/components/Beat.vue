@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="container">
     <b-card
       :title="beat.title"
       img-src="https://i.ytimg.com/vi/6-HrB1lqTbw/maxresdefault.jpg"
@@ -16,10 +16,13 @@
           minute.
         </b>
         <br />
-        <label>Tags:</label><b-badge v-for="tag in beat.tags" :key="tag.id">{{
-            tag.name
-          }}</b-badge>
-        <b-button size="sm" href="#" variant="dark" class="button"><b-icon icon="bag-fill"></b-icon></b-button>
+        <label>Tags:</label
+        ><b-badge v-for="tag in beat.tags" :key="tag.id">{{
+          tag.name
+        }}</b-badge>
+        <b-button size="sm" href="#" variant="dark" class="button"
+          ><b-icon icon="bag-fill"></b-icon
+        ></b-button>
       </b-card-text>
     </b-card>
   </div>
@@ -28,8 +31,8 @@
 <script>
 export default {
   props: {
-    beat: {},
-  },
+    beat: {}
+  }
 };
 </script>
 

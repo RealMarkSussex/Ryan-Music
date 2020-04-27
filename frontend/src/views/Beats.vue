@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="container">
     <SearchBar @input="filterBeats" />
     <br />
     <BeatList :beats="beats" />
@@ -42,6 +42,16 @@ export default {
           time: "1:40",
           BPM: 5,
           tags: [{ id: 2, name: "Uk Afros" }]
+        },
+        {
+          id: 4,
+          title: "Gods Plan",
+          time: "69:21",
+          BPM: 21,
+          tags: [
+            { id: 1, name: "Uk Drill" },
+            { id: 2, name: "Uk Afros" }
+          ]
         }
       ]
     };

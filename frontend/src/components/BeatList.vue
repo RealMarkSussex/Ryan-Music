@@ -10,11 +10,11 @@
 import Beat from "./Beat.vue";
 export default {
   components: {
-    Beat,
+    Beat
   },
   props: {
-      beats: []
-  },
+    beats: []
+  }
 };
 </script>
 
