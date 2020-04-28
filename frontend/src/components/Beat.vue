@@ -38,7 +38,7 @@ export default {
 
 <style scoped>
 .card {
-  font-size: 15px;
+  font-size: 10px;
   color: whitesmoke;
 }
 .button {

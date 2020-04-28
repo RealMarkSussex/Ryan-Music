@@ -2,7 +2,14 @@
   <div class="container">
     <SearchBar @searchBeats="filterBeats" />
     <br />
-    <BeatList :beats="beats" />
+    <div class="row">
+      <div class="col">
+        <BeatList :beats="filteredBeats" />
+      </div>
+      <div class="col">
+        <img src="@/assets/guitar.svg" class="guitar" alt="Guitar" />
+      </div>
+    </div>
   </div>
 </template>
 
@@ -53,13 +60,14 @@ export default {
             { id: 2, name: "Uk Afros" }
           ]
         }
-      ]
+      ],
+      filteredBeats: []
     };
   },
   methods: {
     filterBeats(value) {
       let foundTag = false;
-      let filterBeats = [];
+      this.filteredBeats = [];
       this.beats.forEach(b => {
         b.tags.forEach(t => {
           if (t.name.toUpperCase().includes(value.toUpperCase())) {
@@ -67,12 +75,21 @@ export default {
           }
         });
         if (foundTag) {
-          filterBeats.push(b);
+          this.filteredBeats.push(b);
         }
         foundTag = false;
       });
-      this.beats.splice(0, this.beats.length, ...filterBeats);
     }
+  },
+  mounted() {
+    this.filteredBeats = this.beats;
   }
 };
 </script>
+
+<style>
+.guitar {
+  width: 100%;
+  height: 100%;
+}
+</style>
