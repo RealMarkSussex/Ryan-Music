@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <SearchBar @input="filterBeats(value)" />
+    <SearchBar @searchBeats="filterBeats" />
     <br />
     <BeatList :beats="beats" />
   </div>
@@ -71,7 +71,7 @@ export default {
         }
         foundTag = false;
       });
-      this.beats.splice(0, beats.length, ...filterBeats);
+      this.beats.splice(0, this.beats.length, ...filterBeats);
     }
   }
 };
