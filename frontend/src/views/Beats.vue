@@ -2,7 +2,7 @@
   <div class="container">
     <SearchBar @searchBeats="filterBeats" />
     <br />
-    <BeatList :beats="beats" />
+    <BeatList :beats="filteredBeats" />
   </div>
 </template>
 
@@ -53,13 +53,14 @@ export default {
             { id: 2, name: "Uk Afros" }
           ]
         }
-      ]
+      ],
+      filteredBeats: []
     };
   },
   methods: {
     filterBeats(value) {
       let foundTag = false;
-      let filterBeats = [];
+      this.filteredBeats = [];
       this.beats.forEach(b => {
         b.tags.forEach(t => {
           if (t.name.toUpperCase().includes(value.toUpperCase())) {
@@ -67,12 +68,14 @@ export default {
           }
         });
         if (foundTag) {
-          filterBeats.push(b);
+          this.filteredBeats.push(b);
         }
         foundTag = false;
       });
-      this.beats.splice(0, this.beats.length, ...filterBeats);
     }
+  },
+  mounted() {
+    this.filteredBeats = this.beats;
   }
 };
 </script>
