@@ -3,7 +3,7 @@
     <b-input-group
       class="mb-2"
       size="sm"
-      @input="$emit('input', $event.target.value)"
+      @input="$emit('input', 'Drill')"
     >
       <b-input-group-prepend is-text>
         <b-icon icon="search"></b-icon>

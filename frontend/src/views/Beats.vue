@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <SearchBar @input="filterBeats" />
+    <SearchBar @input="filterBeats(value)" />
     <br />
     <BeatList :beats="beats" />
   </div>
@@ -69,6 +69,7 @@ export default {
         if (!foundTag) {
           this.beats.splice(i, 1);
         }
+        foundTag = false;
       }
     }
   }
