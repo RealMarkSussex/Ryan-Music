@@ -1,14 +1,11 @@
 <template>
-  <div class="container">
-    <SearchBar @searchBeats="filterBeats" />
+  <div>
+    <div>
+      <SearchBar @searchBeats="filterBeats" />
+    </div>
     <br />
-    <div class="row">
-      <div class="col">
-        <BeatList :beats="filteredBeats" />
-      </div>
-      <div class="col">
-        <img src="@/assets/guitar.svg" class="guitar" alt="Guitar" />
-      </div>
+    <div>
+      <BeatList :beats="filteredBeats" />
     </div>
   </div>
 </template>
@@ -86,10 +83,3 @@ export default {
   }
 };
 </script>
-
-<style>
-.guitar {
-  width: 100%;
-  height: 100%;
-}
-</style>

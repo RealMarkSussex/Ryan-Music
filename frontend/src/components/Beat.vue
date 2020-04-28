@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div>
     <b-card
       :title="beat.title"
       img-src="https://i.ytimg.com/vi/6-HrB1lqTbw/maxresdefault.jpg"
@@ -38,11 +38,10 @@ export default {
 
 <style scoped>
 .card {
-  font-size: 10px;
   color: whitesmoke;
 }
 .button {
   width: 100%;
-  height: 100%;
+  height: 20%;
 }</style
 >>
