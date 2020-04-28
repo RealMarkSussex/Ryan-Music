@@ -58,19 +58,20 @@ export default {
   },
   methods: {
     filterBeats(value) {
-      let searchTerm = value.toUpperCase();
       let foundTag = false;
-      for (let i = 0; i < this.beats.length; i++) {
-        for (let j = 0; j < this.beats[i].tags.length; j++) {
-          if (this.beats[i].tags[j].name.toUpperCase().includes(searchTerm)) {
+      let filterBeats = [];
+      this.beats.forEach(b => {
+        b.tags.forEach(t => {
+          if (t.name.toUpperCase().includes(value.toUpperCase())) {
             foundTag = true;
           }
-        }
-        if (!foundTag) {
-          this.beats.splice(i, 1);
+        });
+        if (foundTag) {
+          filterBeats.push(b);
         }
         foundTag = false;
-      }
+      });
+      this.beats.splice(0, beats.length, ...filterBeats);
     }
   }
 };
