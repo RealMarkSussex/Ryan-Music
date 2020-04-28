@@ -25,7 +25,7 @@ export default {
     emitSearch(event) {
       this.$emit("searchBeats", this.searchTerm);
     }
-  },
+  }
 };
 </script>
 
