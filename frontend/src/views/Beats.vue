@@ -2,7 +2,14 @@
   <div class="container">
     <SearchBar @searchBeats="filterBeats" />
     <br />
-    <BeatList :beats="filteredBeats" />
+    <div class="row">
+      <div class="col">
+        <BeatList :beats="filteredBeats" />
+      </div>
+      <div class="col">
+        <img src="@/assets/guitar.svg" class="guitar" alt="Guitar" />
+      </div>
+    </div>
   </div>
 </template>
 
@@ -79,3 +86,10 @@ export default {
   }
 };
 </script>
+
+<style>
+.guitar {
+  width: 100%;
+  height: 100%;
+}
+</style>
