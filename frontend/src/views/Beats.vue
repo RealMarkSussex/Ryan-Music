@@ -6,9 +6,8 @@
       </b-col>
     </b-row>
     <b-row>
-      <b-col> <BeatList :beats="filteredBeats" /> </b-col>
-      <b-col> <BeatList :beats="filteredBeats" /> </b-col>
-      <b-col>
+      <b-col cols="6"> <BeatList :beats="filteredBeats" /> </b-col>
+      <b-col cols="6">
         <img
           src="../assets/beatbox.svg"
           alt="Music Beat Graph"
@@ -17,7 +16,7 @@
       </b-col>
     </b-row>
     <b-row>
-      <b-col>
+      <b-col cols="12">
         <b-card bg-variant="dark" text-variant="white" title="MP3 Licence">
           <b-card-text>Some Shite about MP3 features</b-card-text>
           <b-button href="#" variant="primary">Get Licence</b-button>
@@ -123,11 +122,11 @@ export default {
         }
         foundTag = false;
       });
-      this.filteredBeats = this.filteredBeats.slice(0, 3);
+      this.filteredBeats = this.filteredBeats.slice(0, 6);
     }
   },
   mounted() {
-    this.filteredBeats = this.beats.slice(0, 3);
+    this.filteredBeats = this.beats.slice(0, 6);
   }
 };
 </script>
