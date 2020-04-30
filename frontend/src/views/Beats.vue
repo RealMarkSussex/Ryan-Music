@@ -7,11 +7,12 @@
     </b-row>
     <b-row>
       <b-col> <BeatList :beats="filteredBeats" /> </b-col>
+      <b-col> <BeatList :beats="filteredBeats" /> </b-col>
       <b-col>
         <img
-          src="../assets/musicGraph.jpg"
+          src="../assets/beatbox.svg"
           alt="Music Beat Graph"
-          class="img-fluid"
+          class="img-fluid rounded"
         />
       </b-col>
     </b-row>
