@@ -3,6 +3,11 @@
     <b-container-fluid>
       <b-row>
         <b-col>
+          <h1>Contact</h1>
+        </b-col>
+      </b-row>
+      <b-row>
+        <b-col>
           <b-form @submit="onSubmit" @reset="onReset" v-if="show">
             <b-form-group
               id="input-group-1"
@@ -39,7 +44,7 @@
               rows="3"
               max-rows="6"
             ></b-form-textarea>
-
+            <br />
             <b-button type="submit" variant="primary pill"
               >Send Message</b-button
             >
