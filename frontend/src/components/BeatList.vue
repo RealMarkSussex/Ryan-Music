@@ -1,9 +1,7 @@
 <template>
-  <div class="container">
-    <b-card-group deck>
-      <Beat v-for="beat in beats" :key="beat.id" :beat="beat" />
-    </b-card-group>
-  </div>
+  <b-card-group deck>
+    <Beat v-for="beat in beats" :key="beat.id" :beat="beat" />
+  </b-card-group>
 </template>
 
 <script>

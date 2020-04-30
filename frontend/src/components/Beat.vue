@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <b-container fluid>
     <b-card
       :title="beat.title"
       img-src="https://i.ytimg.com/vi/6-HrB1lqTbw/maxresdefault.jpg"
@@ -25,7 +25,7 @@
         ></b-button>
       </b-card-text>
     </b-card>
-  </div>
+  </b-container>
 </template>
 
 <script>

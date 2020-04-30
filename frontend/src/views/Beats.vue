@@ -1,37 +1,32 @@
 <template>
-  <div class="container">
-    <div>
-      <SearchBar @searchBeats="filterBeats" />
-    </div>
-    <br />
-    <div>
-      <BeatList :beats="filteredBeats" />
-    </div>
-    <div>
-      <div>
+  <b-container fluid>
+    <b-row>
+      <b-col>
+        <SearchBar @searchBeats="filterBeats" />
+      </b-col>
+    </b-row>
+    <b-row>
+      <b-col>
+        <BeatList :beats="filteredBeats" />
+      </b-col>
+      <b-col>
         <b-card bg-variant="dark" text-variant="white" title="MP3 Licence">
           <b-card-text>Some Shite about MP3 features</b-card-text>
           <b-button href="#" variant="primary">Get Licence</b-button>
         </b-card>
-      </div>
-      <br />
-
-      <div>
+        <br />
         <b-card bg-variant="dark" text-variant="white" title="WAV Licence">
           <b-card-text>Some Shite about WAV features content.</b-card-text>
           <b-button href="#" variant="primary">Get Licence</b-button>
         </b-card>
-      </div>
-      <br />
-
-      <div>
+        <br />
         <b-card bg-variant="dark" text-variant="white" title="Premium Licence">
           <b-card-text>Some Shite about premiem features</b-card-text>
           <b-button href="#" variant="primary">Get License</b-button>
         </b-card>
-      </div>
-    </div>
-  </div>
+      </b-col>
+    </b-row>
+  </b-container>
 </template>
 
 <script>
@@ -120,10 +115,11 @@ export default {
         }
         foundTag = false;
       });
+      this.filteredBeats = this.filteredBeats.slice(0, 4);
     }
   },
   mounted() {
-    this.filteredBeats = this.beats;
+    this.filteredBeats = this.beats.slice(0, 4);
   }
 };
 </script>
