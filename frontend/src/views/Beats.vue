@@ -6,9 +6,16 @@
       </b-col>
     </b-row>
     <b-row>
+      <b-col> <BeatList :beats="filteredBeats" /> </b-col>
       <b-col>
-        <BeatList :beats="filteredBeats" />
+        <img
+          src="../assets/musicGraph.jpg"
+          alt="Music Beat Graph"
+          class="img-fluid"
+        />
       </b-col>
+    </b-row>
+    <b-row>
       <b-col>
         <b-card bg-variant="dark" text-variant="white" title="MP3 Licence">
           <b-card-text>Some Shite about MP3 features</b-card-text>
@@ -115,11 +122,11 @@ export default {
         }
         foundTag = false;
       });
-      this.filteredBeats = this.filteredBeats.slice(0, 4);
+      this.filteredBeats = this.filteredBeats.slice(0, 3);
     }
   },
   mounted() {
-    this.filteredBeats = this.beats.slice(0, 4);
+    this.filteredBeats = this.beats.slice(0, 3);
   }
 };
 </script>
