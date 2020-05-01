@@ -53,6 +53,7 @@
         </b-col>
       </b-row>
     </b-container-fluid>
+    <br />
   </div>
 </template>
 

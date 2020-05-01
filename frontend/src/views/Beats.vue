@@ -10,31 +10,34 @@
         <BeatList :beats="filteredBeats" />
       </b-col>
       <b-col cols="6">
-        <img
-          src="../assets/beatbox.svg"
-          alt="Music Beat Graph"
-          class="img-fluid rounded"
-        />
+        <b-row>
+          <b-col>
+            <b-card bg-variant="dark" text-variant="white" title="MP3 Licence">
+              <b-card-text>Some Shite about MP3 features</b-card-text>
+            </b-card>
+          </b-col>
+        </b-row>
+        <b-row>
+          <b-col>
+            <b-card bg-variant="dark" text-variant="white" title="WAV Licence">
+              <b-card-text>Some Shite about WAV features</b-card-text>
+            </b-card>
+          </b-col>
+        </b-row>
+        <b-row>
+          <b-col>
+            <b-card
+              bg-variant="dark"
+              text-variant="white"
+              title="Premium Licence"
+            >
+              <b-card-text>Some Shite about premiem features</b-card-text>
+            </b-card>
+          </b-col>
+        </b-row>
       </b-col>
     </b-row>
     <br />
-    <b-row>
-      <b-col cols="4">
-        <b-card bg-variant="dark" text-variant="white" title="MP3 Licence">
-          <b-card-text>Some Shite about MP3 features</b-card-text>
-        </b-card>
-      </b-col>
-      <b-col cols="4">
-        <b-card bg-variant="dark" text-variant="white" title="WAV Licence">
-          <b-card-text>Some Shite about WAV features</b-card-text>
-        </b-card>
-      </b-col>
-      <b-col cols="4">
-        <b-card bg-variant="dark" text-variant="white" title="Premium Licence">
-          <b-card-text>Some Shite about premiem features</b-card-text>
-        </b-card>
-      </b-col>
-    </b-row>
   </b-container>
 </template>
 
