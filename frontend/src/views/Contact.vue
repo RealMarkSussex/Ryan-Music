@@ -1,6 +1,6 @@
 <template>
   <div class="Contact">
-    <b-container-fluid>
+    <b-container>
       <b-row>
         <b-col>
           <h1>Contact</h1>
@@ -52,7 +52,7 @@
           </b-form>
         </b-col>
       </b-row>
-    </b-container-fluid>
+    </b-container>
     <br />
   </div>
 </template>
