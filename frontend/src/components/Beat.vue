@@ -1,47 +1,20 @@
 <template>
-  <b-container fluid>
-    <b-card
-      :title="beat.title"
-      img-src="https://i.ytimg.com/vi/6-HrB1lqTbw/maxresdefault.jpg"
-      img-alt="Image"
-      img-top
-      tag="article"
-      style="max-width: 20rem;"
-      class="mb-2 card"
-      overlay
+  <b-card
+    bg-variant="info"
+    text-variant="white"
+    header="Info"
+    class="text-center"
+  >
+    <b-card-text
+      >Lorem ipsum dolor sit amet, consectetur adipiscing elit.</b-card-text
     >
-      <b-card-text>
-        <b>
-          This song is {{ beat.time }} long with {{ beat.BPM }} beats per
-          minute.
-        </b>
-        <br />
-        <label>Tags:</label
-        ><b-badge v-for="tag in beat.tags" :key="tag.id">{{
-          tag.name
-        }}</b-badge>
-        <b-button size="sm" href="#" variant="dark" class="button"
-          ><b-icon icon="bag-fill"></b-icon
-        ></b-button>
-      </b-card-text>
-    </b-card>
-  </b-container>
+  </b-card>
 </template>
 
 <script>
 export default {
   props: {
-    beat: {}
+    beat: Object
   }
 };
 </script>
-
-<style scoped>
-.card {
-  color: whitesmoke;
-}
-.button {
-  width: 100%;
-  height: 20%;
-}</style
->>

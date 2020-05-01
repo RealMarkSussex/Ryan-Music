@@ -1,7 +1,13 @@
 <template>
-  <b-card-group deck>
-    <Beat v-for="beat in beats" :key="beat.id" :beat="beat" />
-  </b-card-group>
+  <div>
+    <div v-for="beat in beats" :key="beat.id">
+      <div class="mt-3">
+        <b-card-group deck>
+          <Beat :beat="beat" />
+        </b-card-group>
+      </div>
+    </div>
+  </div>
 </template>
 
 <script>
@@ -11,7 +17,7 @@ export default {
     Beat
   },
   props: {
-    beats: []
+    beats: Array
   }
 };
 </script>

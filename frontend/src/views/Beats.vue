@@ -6,7 +6,9 @@
       </b-col>
     </b-row>
     <b-row>
-      <b-col cols="6"> <BeatList :beats="filteredBeats" /> </b-col>
+      <b-col cols="6">
+        <BeatList :beats="filteredBeats" />
+      </b-col>
       <b-col cols="6">
         <img
           src="../assets/beatbox.svg"
@@ -15,21 +17,21 @@
         />
       </b-col>
     </b-row>
+    <br />
     <b-row>
-      <b-col cols="12">
+      <b-col cols="4">
         <b-card bg-variant="dark" text-variant="white" title="MP3 Licence">
           <b-card-text>Some Shite about MP3 features</b-card-text>
-          <b-button href="#" variant="primary">Get Licence</b-button>
         </b-card>
-        <br />
+      </b-col>
+      <b-col cols="4">
         <b-card bg-variant="dark" text-variant="white" title="WAV Licence">
-          <b-card-text>Some Shite about WAV features content.</b-card-text>
-          <b-button href="#" variant="primary">Get Licence</b-button>
+          <b-card-text>Some Shite about WAV features</b-card-text>
         </b-card>
-        <br />
+      </b-col>
+      <b-col cols="4">
         <b-card bg-variant="dark" text-variant="white" title="Premium Licence">
           <b-card-text>Some Shite about premiem features</b-card-text>
-          <b-button href="#" variant="primary">Get License</b-button>
         </b-card>
       </b-col>
     </b-row>
@@ -122,11 +124,11 @@ export default {
         }
         foundTag = false;
       });
-      this.filteredBeats = this.filteredBeats.slice(0, 6);
+      this.filteredBeats = this.filteredBeats.slice(0, 3);
     }
   },
   mounted() {
-    this.filteredBeats = this.beats.slice(0, 6);
+    this.filteredBeats = this.beats.slice(0, 3);
   }
 };
 </script>
