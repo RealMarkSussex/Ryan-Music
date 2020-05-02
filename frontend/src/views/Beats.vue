@@ -123,11 +123,10 @@ export default {
         }
         foundTag = false;
       });
-      this.filteredBeats = this.filteredBeats.slice(0, 3);
     }
   },
   mounted() {
-    this.filteredBeats = this.beats.slice(0, 3);
+    this.filteredBeats = this.beats;
   }
 };
 </script>
