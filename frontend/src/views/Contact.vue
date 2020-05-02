@@ -1,5 +1,5 @@
 <template>
-  <div class="Contact">
+  <div class="Contact white">
     <b-container>
       <b-row>
         <b-col>
@@ -89,3 +89,9 @@ export default {
   }
 };
 </script>
+
+<style>
+.white {
+  color: white;
+}
+</style>

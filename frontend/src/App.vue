@@ -4,6 +4,7 @@
       <b-navbar-nav>
         <router-link to="/" class="nav">Beats</router-link>
         <router-link to="/Contact" class="nav">Contact</router-link>
+        <router-link to="/Beats" class="nav">Beats</router-link>
       </b-navbar-nav>
     </b-navbar>
     <br />

@@ -1,13 +1,8 @@
 <template>
   <b-container fluid>
     <b-row>
-      <b-col>
-        <SearchBar @searchBeats="filterBeats" />
-      </b-col>
-    </b-row>
-    <b-row>
       <b-col cols="6">
-        <BeatList :beats="filteredBeats" />
+        <FeaturedBeats :beats="beats" />
       </b-col>
       <b-col cols="6">
         <b-row>
@@ -43,13 +38,11 @@
 
 <script>
 // @ is an alias to /src
-import SearchBar from "@/components/SearchBar.vue";
-import BeatList from "@/components/BeatList.vue";
+import FeaturedBeats from "@/components/FeaturedBeats.vue";
 export default {
   name: "Home",
   components: {
-    SearchBar,
-    BeatList
+    FeaturedBeats
   },
   data() {
     return {
@@ -77,61 +70,9 @@ export default {
           time: "1:40",
           BPM: 5,
           tags: [{ id: 2, name: "Uk Afros" }]
-        },
-        {
-          id: 4,
-          title: "Gods Plan",
-          time: "69:21",
-          BPM: 21,
-          tags: [
-            { id: 1, name: "Uk Drill" },
-            { id: 2, name: "Uk Afros" }
-          ]
-        },
-        {
-          id: 5,
-          title: "Rap God",
-          time: "2:10",
-          BPM: 50,
-          tags: [
-            { id: 3, name: "Pop" },
-            { id: 4, name: "Rap" }
-          ]
-        },
-        {
-          id: 6,
-          title: "Cold",
-          time: "3:30",
-          BPM: 0,
-          tags: [
-            { id: 4, name: "Rap" },
-            { id: 5, name: "Hip" }
-          ]
         }
-      ],
-      filteredBeats: []
+      ]
     };
-  },
-  methods: {
-    filterBeats(value) {
-      let foundTag = false;
-      this.filteredBeats = [];
-      this.beats.forEach(b => {
-        b.tags.forEach(t => {
-          if (t.name.toUpperCase().includes(value.toUpperCase())) {
-            foundTag = true;
-          }
-        });
-        if (foundTag) {
-          this.filteredBeats.push(b);
-        }
-        foundTag = false;
-      });
-      this.filteredBeats = this.filteredBeats.slice(0, 3);
-    }
-  },
-  mounted() {
-    this.filteredBeats = this.beats.slice(0, 3);
   }
 };
 </script>
