@@ -7,10 +7,11 @@
         <router-link to="/Beats" class="nav">Beats</router-link>
         <GoogleLogin
           :params="params"
+          :renderParams="renderParams"
           :onSuccess="onSuccess"
           :onFailure="onFailure"
-          >Login</GoogleLogin
-        >
+        ></GoogleLogin>
+
         <GoogleLogin
           :params="params"
           :logoutButton="true"
