@@ -2,7 +2,7 @@
   <div id="app">
     <b-navbar type="dark" variant="dark">
       <b-navbar-nav>
-        <router-link to="/" class="nav">Beats</router-link>
+        <router-link to="/" class="nav">Home</router-link>
         <router-link to="/Contact" class="nav">Contact</router-link>
         <router-link to="/Beats" class="nav">Beats</router-link>
         <GoogleLogin
