@@ -60,6 +60,7 @@ export default {
     },
     onFailure() {
       alert("Failed to login!");
+      this.loggedIn = false;
     },
     logout() {
       this.loggedIn = false;
