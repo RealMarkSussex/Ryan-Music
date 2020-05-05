@@ -15,11 +15,12 @@
           :params="params"
           :logoutButton="true"
           class="btn btn-danger"
+          :onSuccess="logout"
           >Logout</GoogleLogin
         >
       </b-navbar-nav>
     </b-navbar>
-    <p>Logged in with: {{ this.email }}</p>
+    <p v-if="loggedIn">Logged in with: {{ this.email }}</p>
     <br />
     <router-view />
   </div>
@@ -41,7 +42,8 @@ export default {
         height: 50,
         longtitle: true
       },
-      email: ""
+      email: "",
+      loggedIn: false
     };
   },
   components: {
@@ -54,9 +56,13 @@ export default {
       // This only gets the user information: id, name, imageUrl and email
       console.log(profile);
       this.email = profile.yu;
+      this.loggedIn = true;
     },
     onFailure() {
       alert("Failed to login!");
+    },
+    logout() {
+      this.loggedIn = false;
     }
   }
 };
