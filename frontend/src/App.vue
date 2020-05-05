@@ -54,8 +54,8 @@ export default {
       console.log(googleUser);
       let profile = googleUser.getBasicProfile();
       // This only gets the user information: id, name, imageUrl and email
-      console.log(profile);
-      this.email = profile.yu;
+      console.log(profile.getEmail());
+      this.email = profile.getEmail();
       this.loggedIn = true;
     },
     onFailure() {
