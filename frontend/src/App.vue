@@ -55,7 +55,7 @@ export default {
       this.email = profile.getEmail();
     },
     onFailure() {
-      alert("Failed to login!");
+      alert("Failed to Login!");
     }
   }
 };
