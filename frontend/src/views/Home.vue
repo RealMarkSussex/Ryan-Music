@@ -8,14 +8,14 @@
         <b-row>
           <b-col>
             <b-card bg-variant="dark" text-variant="white" title="MP3 Licence">
-              <b-card-text>Some Shite about MP3 features</b-card-text>
+              <b-card-text>MP3 features: £20</b-card-text>
             </b-card>
           </b-col>
         </b-row>
         <b-row>
           <b-col>
             <b-card bg-variant="dark" text-variant="white" title="WAV Licence">
-              <b-card-text>Some Shite about WAV features</b-card-text>
+              <b-card-text>WAV features: £30</b-card-text>
             </b-card>
           </b-col>
         </b-row>
@@ -26,7 +26,7 @@
               text-variant="white"
               title="Premium Licence"
             >
-              <b-card-text>Some Shite about premiem features</b-card-text>
+              <b-card-text>Premiem features: £200</b-card-text>
             </b-card>
           </b-col>
         </b-row>
